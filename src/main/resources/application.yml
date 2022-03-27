@@ -1,0 +1,12 @@
+Spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/pcmarket"
+    username: "postgres"
+    password: "user"
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  data:
+    rest:
+      base-path: /api
