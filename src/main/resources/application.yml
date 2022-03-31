@@ -1,12 +1,16 @@
+
 Spring:
+  server:
+    port: 8080
   datasource:
-    url: "jdbc:postgresql://localhost:5432/pcmarket"
-    username: "postgres"
-    password: "user"
+    url: jdbc:postgresql://localhost:5432/pcmarket
+    username: postgres
+    password: user
   jpa:
-    hibernate:
-      ddl-auto: create
+    hibernate.ddl-auto: create
     show-sql: true
+
+
   data:
-    rest:
-      base-path: /api
+    rest: basePath=/api
+    default-page-size: 10

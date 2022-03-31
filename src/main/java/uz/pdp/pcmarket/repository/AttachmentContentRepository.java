@@ -1,13 +1,12 @@
 package uz.pdp.pcmarket.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.stereotype.Repository;
 import uz.pdp.pcmarket.entity.AttachmentContent;
-
 
 import java.util.Optional;
 
-public interface AttachmentContentRepository extends JpaRepository<AttachmentContent, Integer>, JpaSpecificationExecutor<AttachmentContent> {
-    Optional<AttachmentContent> findByAttachmentId(Integer id);
-
+@Repository
+public interface AttachmentContentRepository extends JpaRepository<AttachmentContent,Integer> {
+    Optional<AttachmentContent> findByAttachmentId(Integer attachment_id);
 }
